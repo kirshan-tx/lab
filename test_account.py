@@ -10,7 +10,7 @@ class Test:
         del self.a1
 
     def test_init(self):
-        assert self.a1.get_name() == "Jane"
+        assert self.a1.get_name() == "001-John"
         assert self.a1.get_balance() == 0
 
     def test_deposit(self):
@@ -30,13 +30,13 @@ class Test:
         self.a1.deposit(7)
 
         assert self.a1.withdraw(5) is True
-        assert self.a1.get_balance == 2
+        assert self.a1.get_balance() == 2
 
         assert self.a1.withdraw(5) is False
-        assert self.a1.get_balance == 2
+        assert self.a1.get_balance() == 2
 
         assert self.a1.withdraw(0) is False
-        assert self.a1.get_balance == 2
+        assert self.a1.get_balance() == 2
 
         assert self.a1.withdraw(-5) is False
-        assert self.a1.get_balance == 2
+        assert self.a1.get_balance() == 2

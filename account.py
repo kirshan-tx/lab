@@ -17,7 +17,7 @@ class Account:
         :return: True if successful and False if not
         """
 
-        if amount < 0:
+        if amount <= 0:
             return False
         else:
             self.__account_balance += amount
@@ -31,7 +31,7 @@ class Account:
         :return: True if successful and False if not
         """
 
-        if amount < 0 or amount > self.__account_balance:
+        if amount <= 0 or amount > self.__account_balance:
             return False
         else:
             self.__account_balance -= amount
